@@ -5,8 +5,8 @@ void createList(List &L) {
     * FS : first(L) diset Nil
     */
     //-------------your code here-------------
-    // NIM : 
-    
+    // NIM :
+
 
     //----------------------------------------
 }
@@ -18,7 +18,7 @@ address alokasi(infotype x) {
 
     address P;
     //-------------your code here-------------
-    // NIM : 
+    // NIM :
 
 
     //----------------------------------------
@@ -30,9 +30,9 @@ void dealokasi(address &P) {
     * FS : menghapus elemen yang ditunjuk oleh P (delete)
     */
     //-------------your code here-------------
-    // NIM : 
+    // NIM :
 
-	
+
     //----------------------------------------
 }
 
@@ -42,8 +42,8 @@ void insertFirst(List &L, address P) {
     * FS : elemen yang ditunjuk P menjadi elemen pertama pada List L
     */
     //-------------your code here-------------
-    // NIM : 
-	
+    // NIM :
+
 
     //----------------------------------------
 }
@@ -54,9 +54,9 @@ void insertLast(List &L, address P) {
     * FS : elemen yang ditunjuk P menjadi elemen terakhir pada List L
     */
     //-------------your code here-------------
-    // NIM : 
-    
-	
+    // NIM :
+
+
     //----------------------------------------
 }
 
@@ -69,23 +69,27 @@ address findElm(List L, infotype x) {
 
     address P;
     //-------------your code here-------------
-    // NIM : 
-    
-	
+    // NIM :
+
+
     //----------------------------------------
     return P;
 }
 
 void deleteFirst(List &L, address &P) {
     /**
-    * IS : List L mungkin kosong
+    * IS : List
+     L mungkin kosong
     * FS : elemen pertama di dalam List L dilepas dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM : 
+    // NIM : 1301154141
+    P = first (L);
+    first(L) = next(P);
+    next(P) = NULL;
 
-	
-	
+
+
     //----------------------------------------
 }
 
@@ -95,9 +99,14 @@ void deleteLast(List &L, address &P) {
     * FS : elemen tarakhir di dalam List L dilepas dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM : 
-
-	
+    // NIM : 1301154141
+    address Q;
+    Q = first(L);
+    while (next(next(Q)) != NULL){
+        Q = next(Q);
+    }
+	P = next(Q);
+	next(Q) = NULL;
 
     //----------------------------------------
 }
@@ -107,9 +116,9 @@ void printInfo(List L) {
     * FS : menampilkan info seluruh elemen list L
     */
     //-------------your code here-------------
-    // NIM : 
+    // NIM :
 
-	
+
     //----------------------------------------
 }
 
@@ -121,9 +130,9 @@ void insertAfter(address Prec, address P) {
     *      ditunjuk pointer Prec
     */
     //-------------your code here-------------
-    // NIM : 
+    // NIM :
 
-	
+
     //----------------------------------------
 
 }
@@ -134,9 +143,13 @@ void deleteAfter(address Prec, address &P) {
     *      dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM : 
-    
-	
+    // NIM : 1301154141
+    P = next(P);
+    next(Prec) = next(P);
+    next(P) = NULL;
+
+
+
     //----------------------------------------
 }
 
