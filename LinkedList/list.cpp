@@ -5,7 +5,9 @@ void createList(List &L) {
     * FS : first(L) diset Nil
     */
     //-------------your code here-------------
-    // NIM :
+    // NIM : 1301150435
+
+    first(L) = NULL;
 
 
     //----------------------------------------
@@ -18,7 +20,11 @@ address alokasi(infotype x) {
 
     address P;
     //-------------your code here-------------
-    // NIM :
+    // NIM : 1301150435
+
+    P = new elmlist;
+    info(P) = x;
+    next(P) = NULL;
 
 
     //----------------------------------------
@@ -30,7 +36,9 @@ void dealokasi(address &P) {
     * FS : menghapus elemen yang ditunjuk oleh P (delete)
     */
     //-------------your code here-------------
-    // NIM :
+    // NIM : 1301150435
+    
+    delete(P);
 
 
     //----------------------------------------
@@ -78,15 +86,11 @@ address findElm(List L, infotype x) {
 
 void deleteFirst(List &L, address &P) {
     /**
-    * IS : List
-     L mungkin kosong
+    * IS : List L mungkin kosong
     * FS : elemen pertama di dalam List L dilepas dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM : 1301154141
-    P = first (L);
-    first(L) = next(P);
-    next(P) = NULL;
+    // NIM :
 
 
 
@@ -99,14 +103,9 @@ void deleteLast(List &L, address &P) {
     * FS : elemen tarakhir di dalam List L dilepas dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM : 1301154141
-    address Q;
-    Q = first(L);
-    while (next(next(Q)) != NULL){
-        Q = next(Q);
-    }
-	P = next(Q);
-	next(Q) = NULL;
+    // NIM :
+
+
 
     //----------------------------------------
 }
@@ -143,11 +142,7 @@ void deleteAfter(address Prec, address &P) {
     *      dan disimpan/ditunjuk oleh P
     */
     //-------------your code here-------------
-    // NIM : 1301154141
-    P = next(P);
-    next(Prec) = next(P);
-    next(P) = NULL;
-
+    // NIM :
 
 
     //----------------------------------------
